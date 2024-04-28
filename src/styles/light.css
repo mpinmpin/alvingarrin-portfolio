@@ -5,7 +5,6 @@
   --darklimegreen: rgb(127, 175, 31);
   --white: #ffffff; 
   --black: rgb(31, 36, 43);
-  --yellow: #f1db0e;
   
 }
 
@@ -252,11 +251,8 @@
 .home-about:hover {
   color: var(--darklimegreen);
 }
-.about h2 {
-  margin-bottom: 20px;
-}
 .about p {
-  margin-top: 5px;
+  margin-top: 30px;
 }
 .not-found p{
   margin-top: 30px;

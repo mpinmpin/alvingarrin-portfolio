@@ -5,7 +5,6 @@
   --darklimegreen: rgb(127, 175, 31);
   --white: #ffffff; 
   --black: rgb(31, 36, 43);
-  --yellow: #f1db0e;
   
 }
 
@@ -14,14 +13,12 @@
   margin: 0;
   padding: 0;
   font-family: "Quicksand";
-  color: var(--black);
-  background-color: var(--white);
-}
-
-
-.button-global {
-  background: var(--darklimegreen);
   color: var(--white);
+  background-color: var(--black);
+}
+.button-global {
+  background: var(--limegreen);
+  color: var(--black);
   font-weight: bold;
   border: 0;
   padding: 8px;
@@ -31,12 +28,11 @@
   margin-bottom: 8px;
 }
 .button-global:hover {
-  background:var(--limegreen);
-}
-.button-global:active {
   background:var(--darklimegreen);
 }
-
+.button-global:active {
+  background:var(--limegreen);
+}
 
 .navbar {
   padding: 20px;
@@ -45,8 +41,9 @@
   justify-content: space-between;
   max-width: 1000px;
   margin: 0 auto;
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid #f2f2f2;
 }
+
 .content {
   max-width: 900px;
   margin: 40px auto;
@@ -59,11 +56,12 @@
   font-size: 13px;
 }
 
+
 .navbar .page-title h1 {
-  color: var(--darklimegreen);
+  color: var(--limegreen);
 }
 .navbar .page-title h1:hover {
-  color: var(--limegreen);
+  color: var(--darklimegreen);
 }
 .navbar .links {
   margin-left: auto;
@@ -76,13 +74,13 @@
   /* THE PROBLEM SOLVER OF SHIFTING MENUS*/
 }
 .navbar a:hover {
-  color: var(--darklimegreen);
+  color: var(--limegreen);
 }
 
 /* blog previews / list */
 .blog-list h2{
   font-size: 25px;
-  color: var(--darklimegreen);
+  color: #9ACD32;
   padding-bottom: 10px;
 }
 .blog-preview {
@@ -96,11 +94,11 @@
 }
 .blog-preview h2 {
   font-size: 20px;
-  color: var(--darklimegreen);
+  color: #9ACD32;
   margin-bottom: 8px;
 }
 .blog-preview h2:hover {
-  color: var(--limegreen);
+  color: rgb(127, 175, 31)
 }
 .blog-preview a{
   text-decoration: none;
@@ -122,18 +120,18 @@
 
 /* BMIcalculator */
 .bmi {
-  max-width: 400px;
-  margin: 0 auto;
-  margin-top: 35px;
-  text-align: center;
-}
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 35px;
+    text-align: center;
+  }
 .bmi label {
   text-align: left;
   display: block;
 }
 .bmi h2 {
   font-size: 20px;
-  color: var(--darklimegreen);
+  color: var(--limegreen);
   margin-bottom: 30px;
 }
 .bmi input {
@@ -194,7 +192,7 @@
   font-size: 16px;
   border: none;
   outline: none;
-  color: var(--black);
+  color: white;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
@@ -207,14 +205,14 @@
   position: absolute;
   /* background-color: #9ACD32; */
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgb(212, 214, 218);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   /* z-index: 1; */
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
   float: none;
-  color: var(--black);
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -223,7 +221,7 @@
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: var(--white);
+  background-color: rgb(31, 36, 43);
 }
 
 /* Show the dropdown menu on hover */
@@ -252,11 +250,8 @@
 .home-about:hover {
   color: var(--darklimegreen);
 }
-.about h2 {
-  margin-bottom: 20px;
-}
 .about p {
-  margin-top: 5px;
+  margin-top: 50px;
 }
 .not-found p{
   margin-top: 30px;
@@ -269,7 +264,6 @@
 }
 
 .calculator {
-
   width: 300px;
   margin: 0 auto;
   padding: 20px;
@@ -296,18 +290,18 @@
 }
 
 .button-calc {
-  background: var(--darklimegreen);
-  color: var(--white);
+  background: var(--limegreen);
+  color: var(--black);
   border: 0;
   padding: 8px;
   border-radius: 3px;
   cursor: pointer;
 }
 .button-calc:hover {
-  background:var(--limegreen);
+  background:var(--darklimegreen);
 }
 .button-calc:active {
-  background:var(--darklimegreen);
+  background:var(--limegreen);
 }
 
 /* Styles for the weather container */
@@ -438,3 +432,4 @@
   background: none;
   color: var(--white);
 }
+

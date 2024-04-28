@@ -1,0 +1,16 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "First blog!",
+      "body": "October 7, 2023 \n\n\nThis is the first blog post I've written here. Many things to come!",
+      "author": "Alvin"
+    },
+    {
+      "id": 2,
+      "title": "October 12, 2023",
+      "body": "I am starting to learn how to create light/dark mode.",
+      "author": "Alvin"
+    }
+  ]
+}
