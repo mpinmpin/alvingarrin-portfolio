@@ -21,7 +21,7 @@ const WeatherApp = () => {
   });
   const [error, setError] = useState("");
 
-  let api_key = process.env.WEATHER_URI;
+  let api_key = process.env.NEXT_PUBLIC_WEATHER_URI;
 
   const search = async () => {
     const element = document.getElementsByClassName("cityInput");
