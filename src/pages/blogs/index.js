@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const getStaticProps = async () => {
   
   try {
-    const res = await fetch('http://localhost:3000/api/data');
+    const res = await fetch('https://alvingarrin.vercel.app/api/data');
     
     if (!res.ok) {
       throw new Error('Failed to fetch data');
