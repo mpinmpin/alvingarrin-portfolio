@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from 'next/image';
 
 import search_icon from "@/Weatherapp Components/Assets/search.png";
@@ -16,12 +16,15 @@ const WeatherApp = () => {
   const [weatherData, setWeatherData] = useState({
     temperature: "-",
     location: "-",
+    country: "-",
     humidity: "-",
     windSpeed: "-",
   });
   const [error, setError] = useState("");
 
   let api_key = process.env.NEXT_PUBLIC_WEATHER_URI;
+
+  const [city, setCity] = useState("Depok");
 
   const search = async () => {
     const element = document.getElementsByClassName("cityInput");
@@ -45,8 +48,9 @@ const WeatherApp = () => {
       const windSpeed = Math.floor(data.wind.speed) + " km/s";
       const temperature = Math.floor(data.main.temp) + "°C";
       const location = data.name;
+      const country = data.sys.country;
 
-      setWeatherData({ temperature, location, humidity, windSpeed });
+      setWeatherData({ temperature, location, humidity, windSpeed, country });
 
       if (data.weather[0].icon === "01d" || data.weather[0].icon === "01n") {
         setWicon(clear_icon);
@@ -90,6 +94,7 @@ const WeatherApp = () => {
       setWeatherData({ 
         temperature: "-",
         location: "-",
+        country: "-",
         humidity: "-",
         windSpeed: "-", 
         });
@@ -103,6 +108,11 @@ const WeatherApp = () => {
     }
   };
 
+    // Fetch weather data for London on component mount (first render)
+    useEffect(() => {
+      search("Depok"); // Call search with default city ("Depok")
+    }, []); // Empty dependency array ensures it runs only once on mount
+
   return (
     <>
     <Head>
@@ -114,6 +124,7 @@ const WeatherApp = () => {
           type="text"
           className="cityInput"
           placeholder="Search a city..."
+          defaultValue={city} 
           onKeyPress={handleKeyPress}
         />
         <div className="search-icon" onClick={() => search()}>
@@ -125,7 +136,7 @@ const WeatherApp = () => {
         <Image src={wicon} alt="" />
       </div>
       <div className="weather-temp">{weatherData.temperature}</div>
-      <div className="weather-location">{weatherData.location}</div>
+      <div className="weather-location">{weatherData.location}, {weatherData.country}</div>
       <div className="data-container">
         <div className="element">
           <Image src={humidity_icon} alt="" className="icon" />
@@ -150,3 +161,6 @@ const WeatherApp = () => {
 };
 
 export default WeatherApp;
+
+// use thunderlient for checking elements
+// https://api.openweathermap.org/data/2.5/weather?q=Depok&units=Metric&appid=$(api_key)
