@@ -199,6 +199,10 @@
   margin: 0; /* Important for vertical align on mobile phones */
 }
 
+.dropbtn:hover {
+  color: var(--limegreen);
+}
+
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
