@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
       <footer className="footer">
-        Copyright 2024 @alvingarrin
+        © Copyright 2024 Alvin Garrin
       </footer>
     );
   }

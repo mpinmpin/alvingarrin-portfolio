@@ -17,68 +17,76 @@ const Navbar = () => {
     return ( 
         <nav>
             <ul className="navbar">
-            <div className="page-title">
-                <Link href="/"><h1>alvingarrin</h1></Link>
-            </div>           
-            <div className="links">
-                <div className="dropdown hideOnMobile">
-                    <button className="dropbtn">Simple Apps
-                    </button>
-                    <div className="dropdown-content">
-                        <Link href="/weatherapp">Weather App</Link>
-                        <Link href="/calculator">Calculator</Link>
-                        <Link href="/bmicalculator">BMI Calculator</Link>
-                        {/* <Link href="/counter">Simple Counter</Link> */}
+                <div className="page-title">
+                    <Link href="/"><h1>alvingarrin</h1></Link>
+                </div>           
+                <div className="links">
+                    <div className="dropdown hideOnMobile">
+                        <button className="dropbtn">Simple Apps
+                        </button>
+                        <div className="dropdown-content">
+                            <Link href="/weatherapp">Weather App</Link>
+                            <Link href="/calculator">Calculator</Link>
+                            <Link href="/bmicalculator">BMI Calculator</Link>
+                            {/* <Link href="/counter">Simple Counter</Link> */}
+                        </div>
                     </div>
-                </div>
-                <div className="dropdown hideOnMobile">
-                    <button className="dropbtn">Blogs
-                    </button>
-                    <div className="dropdown-content">
-                        <Link href="/blogs">Blogs Page</Link>
-                        <Link href="/create">Create New Blog</Link>
+                    <div className="dropdown hideOnMobile">
+                        <button className="dropbtn">Blogs
+                        </button>
+                        <div className="dropdown-content">
+                            <Link href="/blogs">Blogs Page</Link>
+                            <Link href="/create">Create New Blog</Link>
+                        </div>
                     </div>
+                    <div className="dropdown  hideOnMobile">
+                        <Link href="/about">About</Link>
+                    </div>
+                    <div className="dropdown">
+                        {/* <ThemeToggler /> */}
+                    </div>
+                    <li class="menu-button" onClick={showSidebar}>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+                            <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
+                        </a>
+                    </li>
                 </div>
-                <div className="dropdown  hideOnMobile">
-                    <Link href="/about">About</Link>
-                </div>
-                <div className="dropdown">
-                    {/* <ThemeToggler /> */}
-                </div>
-                <button className='sidebar-show' onclick={showSidebar}>show sidebar
-                </button>   
-            </div>
             </ul>
 
             <ul className="sidebar">
-                <button className='sidebar-hide' onclick={hideSidebar}>close sidebar
-                </button>         
-            <div className="links">
-                <div className="dropdown">
-                    <button className="dropbtn">Simple Apps
-                    </button>
-                    <div className="dropdown-content">
-                        <Link href="/weatherapp">Weather App</Link>
-                        <Link href="/calculator">Calculator</Link>
-                        <Link href="/bmicalculator">BMI Calculator</Link>
-                        {/* <Link href="/counter">Simple Counter</Link> */}
+                <div className= "close-sidebar" onClick={hideSidebar}>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+                        <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg>
+                    </a>
+                </div>
+                <div className="links">
+                    <div className="dropdown">
+                        <button className="dropbtn">Simple Apps
+                        </button>
+                        <div className="dropdown-content">
+                            <Link href="/weatherapp">Weather App</Link>
+                            <Link href="/calculator">Calculator</Link>
+                            <Link href="/bmicalculator">BMI Calculator</Link>
+                            {/* <Link href="/counter">Simple Counter</Link> */}
+                        </div>
+                    </div>
+                    <div className="dropdown">
+                        <button className="dropbtn">Blogs
+                        </button>
+                        <div className="dropdown-content">
+                            <Link href="/blogs">Blogs Page</Link>
+                            <Link href="/create">Create New Blog</Link>
+                        </div>
+                    </div>
+                    <div className="dropdown">
+                        <div className="dropbtn">
+                            <Link href="/about">About</Link>
+                        </div>
+                    </div>
+                    <div className="dropdown">
+                        {/* <ThemeToggler /> */}
                     </div>
                 </div>
-                <div className="dropdown">
-                    <button className="dropbtn">Blogs
-                    </button>
-                    <div className="dropdown-content">
-                        <Link href="/blogs">Blogs Page</Link>
-                        <Link href="/create">Create New Blog</Link>
-                    </div>
-                </div>
-                <div className="dropdown">
-                    <Link href="/about">About</Link>
-                </div>
-                <div className="dropdown">
-                    {/* <ThemeToggler /> */}
-                </div>
-            </div>
             </ul>
         </nav>
         
