@@ -64,7 +64,7 @@ const Calculator = () => {
   return (
     <>
       <Head>
-        <title>My Site | Calculator</title>
+        <title>Calculator</title>
       </Head>
       <div className='bmi'>
         <h2>Calculator</h2>

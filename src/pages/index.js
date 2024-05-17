@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>My Site | Home</title>
+        <title>Alvin Garrin | Home</title>
       </Head>
       <div className="home">
         <div>

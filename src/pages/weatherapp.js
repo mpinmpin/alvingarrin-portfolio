@@ -116,7 +116,7 @@ const WeatherApp = () => {
   return (
     <>
     <Head>
-      <title>My Site | Weather App</title>
+      <title>Weather App</title>
     </Head>
       <div className="weather-container">
       <div className="top-bar">

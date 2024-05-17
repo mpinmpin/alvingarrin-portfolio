@@ -12,7 +12,7 @@ const Counter = () => {
     return ( 
         <>
             <Head>
-                <title>My Site | Calculator</title>
+                <title>Counter</title>
             </Head>
             <div className="counter">
                 <p>You have clicked: {counter} times</p>

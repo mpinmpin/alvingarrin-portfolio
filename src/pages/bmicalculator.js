@@ -25,7 +25,7 @@ const BMICalculator = () => {
     return (
          <>
             <Head>
-                <title>My Site | BMI Calculator</title>
+                <title>BMI Calculator</title>
             </Head>
             <div className="bmi">
                 <h2>BMI Calculator</h2>

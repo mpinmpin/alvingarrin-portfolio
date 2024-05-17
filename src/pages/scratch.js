@@ -4,7 +4,7 @@ const Scratch = () => {
     return ( 
         <>
             <Head>
-                <title>My Site | Scratch</title>
+                <title>Scratch</title>
             </Head>
             <div className="about">
                 <h2>This is scratch</h2>
