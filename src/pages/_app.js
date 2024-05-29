@@ -1,4 +1,4 @@
-import Layout from '../../components/Layout'
+import Layout from '@/components/Layout'
 import "@/styles/globals.css";
 // import "@/styles/dark.css";
 

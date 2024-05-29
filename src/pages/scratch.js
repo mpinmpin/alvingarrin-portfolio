@@ -1,17 +1,24 @@
 import Head from "next/head";
+import useFetchData from '@/hooks/useFetchData';
 
 const Scratch = () => {
-    return ( 
-        <>
-            <Head>
-                <title>Scratch</title>
-            </Head>
-            <div className="about">
-                <h2>This is scratch</h2>
-                <p>{10+12}</p>
-            </div>
-        </>
-     );
+    
+    const { data: blog, loading, error } = useFetchData('https://alvingarrin.vercel.app/api/data');
+
+    if (loading) {
+      return <p>Loading...</p>;
+    }
+  
+    if (error) {
+      return <p>Error: {error.message}</p>;
+    }
+  
+    return (
+      <div>
+        <h1>{blog.title}</h1>
+        <p>{blog.author}</p>
+      </div>
+    );
 }
  
 export default Scratch;

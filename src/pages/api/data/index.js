@@ -1,18 +1,27 @@
-import connectDB from '@/utils/mongoatlas';
+import connectDB from '@/utils/connectDB';
 import Blog from '@/models/Blog';
-import { NextResponse } from "next/server";
+// import { NextResponse } from "next/server";
 
 export default async function handler(req, res) {
   await connectDB();
 
   try {
-    const users = await Blog.find();
-    res.status(200).json(users);
+    const data = await Blog.find();
+    res.status(200).json(data);
   } catch (error) {
     console.error('Error fetching data:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
 }
+
+
+
+
+
+
+
+
+
 
 // // pages/api/data.js
 // import connectDB from '../../../utils/mongoatlas';

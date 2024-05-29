@@ -1,11 +1,14 @@
 import Head from "next/head";
 import Link from 'next/link';
+import useFetchData from '@/hooks/useFetchData';
+
 
 
 export const getStaticProps = async () => {
   
   try {
     const res = await fetch('https://alvingarrin.vercel.app/api/data');
+    // const res = await fetch('http://localhost:3000/api/data');
     
     if (!res.ok) {
       throw new Error('Failed to fetch data');
