@@ -1,6 +1,5 @@
 import connectDB from '@/utils/connectDB';
 import Blog from '@/models/Blog';
-// import { NextResponse } from "next/server";
 
 export default async function handler(req, res) {
   await connectDB();

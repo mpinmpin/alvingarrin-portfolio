@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from 'next/link';
-import useFetchData from '@/hooks/useFetchData';
+// import useFetchData from '@/hooks/useFetchData';
 
 
 
