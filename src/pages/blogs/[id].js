@@ -1,6 +1,6 @@
 export const getStaticPaths = async () => {
-    const res = await fetch('https://alvingarrin.vercel.app/api/data');
-    // const res = await fetch('http://localhost:3000/api/data');
+    // const res = await fetch('https://alvingarrin.vercel.app/api/data');
+    const res = await fetch('http://localhost:3000/api/data');
     const data = await res.json();
   
     // map data to an array of path objects with params (id)
@@ -20,8 +20,8 @@ export const getStaticPaths = async () => {
   
   export const getStaticProps = async (context) => {
     const id = context.params.id;
-    const res = await fetch('https://alvingarrin.vercel.app/api/data/' + id);
-    // const res = await fetch('http://localhost:3000/api/data/' + id);
+    // const res = await fetch('https://alvingarrin.vercel.app/api/data/' + id);
+    const res = await fetch('http://localhost:3000/api/data/' + id);
     const data = await res.json();
   
     return {
