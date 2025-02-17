@@ -4,5 +4,5 @@ This is my portfolio app with features like weatherapp, calculator, blogs, and s
 
 This project was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-[`alvingarrin2.vercel.app`](https://alvingarrin2.vercel.app)
+Site: [`alvingarrin2.vercel.app`](https://alvingarrin2.vercel.app)
 
